@@ -1,10 +1,12 @@
-import GalleryItem from "./GalleryItem"
+import GalleryItem from './GalleryItem'
 
-function Gallery({ data }) {
-    const display = data.map((item, i) => {
-        return <GalleryItem key={i} item={item} />
+function Gallery(props){
+
+    const display = props.data.map((item,index) => {
+        return (
+            <GalleryItem item={item} key={index} />
+        )
     })
-
     return (
         <div>
             {display}
